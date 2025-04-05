@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang di Nusantara</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="relative h-screen w-screen overflow-hidden">
+    
+    <video autoplay loop class="absolute top-0 left-0 w-full h-full object-cover">
+        <source src="../bagaian0/backgroundopening.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+
+    <div class="absolute top-0 left-0 w-full h-full flex flex-col items-center justify-center bg-black bg-opacity-50 text-white">
+        <h1 class="text-4xl md:text-6xl font-bold mb-6">Selamat datang di Nusantara</h1>
+        <button id="startBtn" class="px-6 py-3 bg-blue-600 hover:bg-blue-800 text-white text-lg rounded-lg">
+            Ayo Mulai
+        </button>
+    </div>
+
+    <script>
+        document.getElementById("startBtn").addEventListener("click", function() {
+            window.location.href = "../bagaian1/karakter.html";
+        });
+    </script>
+</body>
+</html>
