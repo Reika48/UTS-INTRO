@@ -1,0 +1,95 @@
+#myVideo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+.location-btn {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+#hud {
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+}
+#game-info {
+    display: flex;
+    gap: 150px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+#status-bars {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+.info-icon {
+    display: inline-block;
+    margin-left: 5px;
+    cursor: pointer;
+    color: red;
+    font-weight: bold;
+    position: relative;
+    z-index: 999;
+}
+.info-icon:hover .tooltip {
+    display: block;
+}
+.tooltip {
+    display: none;
+    position: absolute;
+    top: -5px;
+    left: 20px;
+    background: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+    font-size: 12px;
+    z-index: 999;
+}
+
+#h1game {
+    font-size: 2em;
+    color: thistle;
+    text-align: center;
+    animation-name: h1game;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes h1game {
+    0% {
+        transform: scale3d(1, 1, 1);
+        color: rgb(40, 50, 189);
+    }
+    50% {
+        transform: scale3d(1.2, 1.2, 1.2);
+        color: black;
+    }
+    100% {
+        transform: scale3d(1, 1, 1);
+        color: thistle;
+    }
+}
+@media (max-width: 768px) {
+    #myVideo {
+        width: auto;
+        height: 100vh;
+        min-width: 100%;
+    }
+}
